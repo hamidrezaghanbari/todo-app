@@ -1,9 +1,9 @@
-import { AddTodo, Banner, Header, List } from "@/components";
+import { AddTodo, Banner, Header, List, WithAuth } from "@/components";
 import Head from "next/head";
 
 const Home = () => {
   return (
-    <>
+    <WithAuth>
       <Head>
         <title>Todo App ⚒️</title>
       </Head>
@@ -20,7 +20,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </WithAuth>
   );
 };
 

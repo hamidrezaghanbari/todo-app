@@ -1,6 +1,6 @@
 import { login } from "@/service/requests";
 import { useMutation } from "@tanstack/react-query";
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 import { useProfileStore } from ".";
 import { useRouter } from "next/router";
 
