@@ -26,7 +26,7 @@ export const useLogin = () => {
       { email, password },
       {
         onSuccess: (response) => {
-          if (response.token) {
+          if (response.token?.length > 0) {
             sessionStorage.setItem("user_id", response?.id?.toString());
             sessionStorage.setItem("token", response?.token?.toString());
 

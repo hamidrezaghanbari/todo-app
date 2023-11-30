@@ -11,6 +11,8 @@ export const useLogout = () => {
     mutationFn: logout,
     onSuccess: () => {
       setProfile(null);
+      sessionStorage.removeItem("user_id");
+      sessionStorage.removeItem("token");
 
       router.replace("/login");
     },
